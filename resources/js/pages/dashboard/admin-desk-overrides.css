@@ -1,0 +1,501 @@
+.notice-deficiency {
+    background: #ffebc9;
+    color: #a85a00;
+}
+.notice-approved {
+    background: #dcf2e5;
+    color: #1b7a4b;
+}
+.notice-payment {
+    background: #e3ebfa;
+    color: #2457b8;
+}
+.notice-reminder {
+    background: #ebe3f8;
+    color: #6d43b8;
+}
+.notice-schedule {
+    background: #d9f1f3;
+    color: #0b7a84;
+}
+.dark .notice-deficiency {
+    background: #4a3219;
+    color: #ffd18e;
+}
+.dark .notice-approved {
+    background: #1a3d2b;
+    color: #9ce2b5;
+}
+.dark .notice-payment {
+    background: #263a5f;
+    color: #b7cdff;
+}
+.dark .notice-reminder {
+    background: #382954;
+    color: #cfb7ff;
+}
+.dark .notice-schedule {
+    background: #173b40;
+    color: #8fe0e5;
+}
+.history-entry.newest > i {
+    border-color: var(--pink);
+    background: var(--pink);
+}
+.desk-table tbody tr[onclick] {
+    cursor: pointer;
+}
+.desk-table tbody tr[onclick]:hover {
+    background: #fbf9fa;
+}
+.dark .desk-table tbody tr[onclick]:hover {
+    background: #26212c;
+}
+.mobile-nav button.active:before {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 10px);
+    width: 20px;
+    height: 2px;
+    border-radius: 0 0 2px 2px;
+    background: var(--pink);
+    content: '';
+}
+.dark .mobile-nav {
+    background: #0e0c12;
+}
+.dark .cycle-icon {
+    background: #2a2530;
+    color: #c6bcca;
+}
+.dark .summary-tile {
+    background: var(--card);
+}
+.dark .dashboard-grid > .needs,
+.dark .pipeline {
+    background: var(--card);
+}
+.dark .need-tile {
+    color: var(--ink);
+}
+.dark .drawer-note {
+    color: #ddd7e3;
+}
+.dark .approval-hint {
+    color: #c8c0ce;
+}
+.decision-status {
+    padding: 8px 2px;
+}
+.receipt-grid > span strong {
+    font-weight: 600;
+}
+.time-fields {
+    min-width: 0;
+}
+.session-actions button:disabled {
+    opacity: 0.45;
+}
+.account-button {
+    cursor: default;
+}
+.desk-table tbody tr[onclick] > td {
+    transition: background-color 0.12s ease;
+}
+.drawer-footer .decision-status {
+    font-size: 10px;
+}
+@media (max-width: 760px) {
+    .desk-topbar {
+        padding-right: 14px;
+        padding-left: 14px;
+    }
+    .desk-content {
+        width: 100%;
+        max-width: 100%;
+    }
+    .application-drawer {
+        width: 100%;
+    }
+    .mobile-nav {
+        grid-template-columns: repeat(5, minmax(0, 1fr)) 34px;
+    }
+    .mobile-nav .mobile-avatar {
+        display: grid;
+        width: 28px;
+        height: 28px;
+        place-items: center;
+        border-radius: 50%;
+        background: #f1dbe5;
+        color: #78314f;
+        font-size: 9px;
+        font-weight: 700;
+    }
+}
+@media (max-width: 420px) {
+    .desk-content {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+    .dashboard-grid {
+        min-width: 0;
+    }
+    .needs-grid,
+    .pipeline-legend {
+        min-width: 0;
+    }
+    .page-heading p {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+    .drawer-actions {
+        min-width: 0;
+    }
+}
+
+.ceas-desk {
+    --bg: oklch(1 0 0);
+    --card: oklch(1 0 0);
+    --ink: oklch(0.145 0 0);
+    --muted: oklch(0.556 0 0);
+    --border: oklch(0.922 0 0);
+    --pink: oklch(58.161% 0.2106 16.788);
+    display: block;
+    min-height: calc(100vh - 4rem);
+    overflow-x: hidden;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+}
+.dark .ceas-desk {
+    --bg: oklch(0.145 0 0);
+    --card: oklch(0.145 0 0);
+    --ink: oklch(0.985 0 0);
+    --muted: oklch(0.708 0 0);
+    --border: oklch(0.269 0 0);
+    --pink: oklch(0.985 0 0);
+}
+.ceas-sidebar,
+.desk-topbar,
+.mobile-nav {
+    display: none !important;
+}
+.desk-main {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+}
+.desk-content {
+    width: min(1280px, 100%);
+    padding: 24px 28px 28px;
+}
+.section-tabs {
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    margin: 0 0 18px;
+    border-bottom: 1px solid var(--border);
+    scrollbar-width: thin;
+}
+.section-tabs button {
+    position: relative;
+    display: inline-flex;
+    min-height: 39px;
+    align-items: center;
+    gap: 7px;
+    flex: 0 0 auto;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    padding: 0 12px;
+    background: transparent;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 500;
+}
+.section-tabs button.active {
+    border-bottom-color: var(--primary);
+    color: var(--foreground);
+}
+.section-tabs button > b {
+    display: grid;
+    min-width: 18px;
+    height: 18px;
+    place-items: center;
+    border-radius: 9px;
+    padding: 0 5px;
+    background: var(--primary);
+    color: var(--primary-foreground);
+    font-size: 9px;
+}
+.ceas-desk h1,
+.ceas-desk h2,
+.ceas-desk h3,
+.ceas-desk .ceas-brand b,
+.ceas-desk .cycle-count b,
+.ceas-desk .summary-tile > b,
+.ceas-desk .session-date b,
+.ceas-desk .drawer-head h2,
+.ceas-desk .modal-head h2 {
+    font-family: var(--font-sans);
+}
+.ceas-desk .desk-content {
+    color: var(--foreground);
+}
+.ceas-desk .pipeline,
+.ceas-desk .dashboard-grid > .needs,
+.ceas-desk .panel,
+.ceas-desk .session-card,
+.ceas-desk .summary-tile,
+.ceas-desk .drawer-section,
+.ceas-desk .ceas-modal {
+    border-color: var(--border);
+    background: var(--card);
+}
+.ceas-desk .desk-table th,
+.ceas-desk .desk-table td {
+    border-color: var(--border);
+}
+.ceas-desk .primary {
+    background: var(--primary);
+    color: var(--primary-foreground);
+}
+.ceas-desk .primary:hover:not(:disabled) {
+    opacity: 0.9;
+}
+.ceas-desk .primary:disabled {
+    opacity: 0.45;
+}
+.ceas-desk .section-tabs button.active {
+    border-bottom-color: var(--primary);
+}
+.ceas-desk .pipeline-legend button,
+.ceas-desk .subjects span,
+.ceas-desk .program-tag {
+    border-color: var(--border);
+    background: var(--accent);
+    color: var(--foreground);
+}
+.ceas-desk .application-drawer,
+.ceas-desk .drawer-head,
+.ceas-desk .drawer-footer {
+    background: var(--card);
+}
+.ceas-desk .desk-toast {
+    background: var(--foreground);
+    color: var(--background);
+}
+.ceas-desk .desk-toast svg {
+    color: var(--background);
+}
+.ceas-desk .ceas-sidebar,
+.ceas-desk .desk-topbar,
+.ceas-desk .mobile-nav {
+    display: none !important;
+}
+.ceas-desk .desk-main {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+}
+.ceas-desk .page-heading h1,
+.ceas-desk .section-head h2,
+.ceas-desk .drawer-section h3,
+.ceas-desk .cycle-count b,
+.ceas-desk .summary-tile > b,
+.ceas-desk .session-date b,
+.ceas-desk .drawer-head h2,
+.ceas-desk .modal-head h2 {
+    font-family: var(--font-sans);
+}
+.ceas-desk .mono,
+.ceas-desk .student-link small,
+.ceas-desk .payments-table .mono {
+    font-family: ui-monospace, 'Cascadia Code', 'Segoe UI Mono', monospace;
+}
+.ceas-desk {
+    font-size: 16px;
+}
+.ceas-desk .page-heading h1 {
+    font-size: 32px;
+}
+.ceas-desk .page-heading p,
+.ceas-desk .desk-content > .page-heading + p {
+    font-size: 15px;
+}
+.ceas-desk .section-head h2 {
+    font-size: 19px;
+}
+.ceas-desk .section-head p,
+.ceas-desk .cycle-copy span,
+.ceas-desk .today,
+.ceas-desk .desk-footer,
+.ceas-desk .cycle-progress > small {
+    font-size: 12px;
+}
+.ceas-desk .cycle-copy b {
+    font-size: 16px;
+}
+.ceas-desk .cycle-count b {
+    font-size: 34px;
+}
+.ceas-desk .cycle-count small,
+.ceas-desk .cycle-progress > div,
+.ceas-desk .summary-tile small,
+.ceas-desk .summary-tile span {
+    font-size: 11px;
+}
+.ceas-desk .needs-grid .need-tile > span:nth-child(2) > strong {
+    font-size: 29px;
+}
+.ceas-desk .needs-grid .need-tile > span:nth-child(2) > b {
+    font-size: 14px;
+}
+.ceas-desk .needs-grid .need-tile > span:nth-child(2) > small {
+    font-size: 12px;
+}
+.ceas-desk .desk-table th {
+    font-size: 12px;
+}
+.ceas-desk .desk-table td,
+.ceas-desk .student-link,
+.ceas-desk .student-static,
+.ceas-desk .check-row b,
+.ceas-desk .doc-row b,
+.ceas-desk .feed-row b,
+.ceas-desk .feed-row > div span {
+    font-size: 13px;
+}
+.ceas-desk .student-link small,
+.ceas-desk .student-static small,
+.ceas-desk .feed-row time,
+.ceas-desk .desk-table .wait {
+    font-size: 11px;
+}
+.ceas-desk .status-chip,
+.ceas-desk .eligibility-tag,
+.ceas-desk .notice-type,
+.ceas-desk .program-tag,
+.ceas-desk .row-link,
+.ceas-desk .small-button,
+.ceas-desk .table-actions button,
+.ceas-desk .filter-button,
+.ceas-desk .toolbar > select,
+.ceas-desk .status-filters button {
+    font-size: 11px;
+}
+.ceas-desk .status-filters button {
+    min-height: 34px;
+    padding-inline: 10px;
+}
+.ceas-desk .status-filters b {
+    min-width: 20px;
+    height: 20px;
+    font-size: 10px;
+}
+.ceas-desk .search-box input,
+.ceas-desk .session-detail > b,
+.ceas-desk .examinee,
+.ceas-desk .examinee-list > div span {
+    font-size: 13px;
+}
+.ceas-desk .session-date b {
+    font-size: 21px;
+}
+.ceas-desk .session-date small,
+.ceas-desk .session-detail small,
+.ceas-desk .examinee-list > div small {
+    font-size: 11px;
+}
+.ceas-desk .session-detail select,
+.ceas-desk .examinee-list select,
+.ceas-desk .session-form input,
+.ceas-desk .session-form select,
+.ceas-desk .session-form label {
+    font-size: 13px;
+}
+.ceas-desk .drawer-head h2 {
+    font-size: 24px;
+}
+.ceas-desk .drawer-meta,
+.ceas-desk .drawer-section h3,
+.ceas-desk .drawer-footer,
+.ceas-desk .inline-form > div b {
+    font-size: 14px;
+}
+.ceas-desk .drawer-section .section-head p,
+.ceas-desk .check-row small,
+.ceas-desk .doc-row small,
+.ceas-desk .history-entry small,
+.ceas-desk .history-entry time,
+.ceas-desk .approval-hint,
+.ceas-desk .inline-form p {
+    font-size: 12px;
+}
+.ceas-desk .check-row > button,
+.ceas-desk .verify-button,
+.ceas-desk .flag-button {
+    font-size: 11px;
+}
+.ceas-desk .subjects span {
+    font-size: 12px;
+}
+.ceas-desk .modal-head h2 {
+    font-size: 24px;
+}
+.ceas-desk .receipt-grid > span,
+.ceas-desk .receipt-grid strong,
+.ceas-desk .receipt-image b,
+.ceas-desk .receipt-note,
+.ceas-desk .session-error {
+    font-size: 12px;
+}
+.ceas-desk .primary,
+.ceas-desk .outline-button,
+.ceas-desk .danger-button,
+.ceas-desk .modal-head p {
+    font-size: 13px;
+}
+.ceas-desk .payments-table .payment-action {
+    border-color: #000;
+    background: #000;
+    color: #fff;
+}
+.ceas-desk .payments-table .payment-action:hover:not(:disabled) {
+    background: #242124;
+    color: #fff;
+}
+.ceas-desk .section-tabs button {
+    min-height: 44px;
+    font-size: 15px;
+}
+.ceas-desk .section-tabs button > b {
+    min-width: 21px;
+    height: 21px;
+    font-size: 11px;
+}
+@media (max-width: 760px) {
+    .ceas-desk .desk-content {
+        padding: 20px 16px 24px;
+    }
+    .ceas-desk .page-heading h1 {
+        font-size: 28px;
+    }
+    .ceas-desk .section-head h2 {
+        font-size: 18px;
+    }
+    .ceas-desk .needs-grid .need-tile > span:nth-child(2) > b {
+        font-size: 13px;
+    }
+    .ceas-desk .desk-table th {
+        font-size: 11px;
+    }
+    .ceas-desk .desk-table td,
+    .ceas-desk .student-link,
+    .ceas-desk .student-static {
+        font-size: 12px;
+    }
+    .ceas-desk .drawer-head h2,
+    .ceas-desk .modal-head h2 {
+        font-size: 22px;
+    }
+}

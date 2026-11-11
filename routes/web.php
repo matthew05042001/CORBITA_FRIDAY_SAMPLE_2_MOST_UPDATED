@@ -173,6 +173,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
         ->name('defense-requests.generate-docs');
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/assistant/comprehensive-exam', function () {
+        abort_unless(Auth::user()?->role === 'Administrative Assistant', 403);
+
+        return Inertia::render('dashboard/admin-desk');
+    })->name('assistant.compre-exam.index');
 
     /* Coordinator Program Assignments - Super Admin only */
     Route::prefix('api/coordinator-assignments')->group(function () {

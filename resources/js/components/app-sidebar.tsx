@@ -55,8 +55,8 @@ const studentNavItems: MainNavItem[] = [
         icon: CalendarFold,
 
     },
-    
 
+    
 ];
 
 const coordinatorNavItems: MainNavItem[] = [
@@ -76,7 +76,7 @@ const coordinatorNavItems: MainNavItem[] = [
         href: '/defense',
         icon: FileText,
         subItems: [
-            { title: 'Comprehensive Exams', href: '/coordinator/compre-exam' },
+            { title: 'Comprehensive Exams', href: route('coordinator.compre-exam.index') },
             { title: 'Payment Receipt', href: '/coordinator/compre-payment' },
         ],
     },
@@ -96,7 +96,7 @@ const assistantNavItems: MainNavItem[] = [
         href: '/defense',
         icon: FileText,
         subItems: [
-            { title: 'Comprehensive Exams', href: '/coordinator/compre-exam' },
+            { title: 'Comprehensive Exams', href: route('assistant.compre-exam.index') },
             { title: 'Payment Receipt', href: '/coordinator/compre-payment' },
         ],
     },

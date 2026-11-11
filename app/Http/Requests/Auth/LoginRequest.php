@@ -108,6 +108,25 @@ class LoginRequest extends FormRequest
                 }
             }
         }
+
+        if (app()->environment('local')
+            && $identifier === 'coordinator@test.com'
+            && $user
+            && $user->isCoordinator()
+            && Hash::check($password, $user->password)) {
+            Auth::login($user, $this->boolean('remember'));
+            RateLimiter::clear($this->throttleKey());
+            return;
+        }
+
+        if (app()->environment('local')
+            && $identifier === 'aa@test.com'
+            && $user?->role === 'Administrative Assistant'
+            && Hash::check($password, $user->password)) {
+            Auth::login($user, $this->boolean('remember'));
+            RateLimiter::clear($this->throttleKey());
+            return;
+        }
         
         // Legacy authentication
         try {
